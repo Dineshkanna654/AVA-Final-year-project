@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="HomeStyle.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav class="navigation-bar">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/128/9732/9732782.png" alt="">
+            </div>
+            <div class="pages">
+                <ul>
+                    <li>Home</li>
+                    <li>Research</li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+        <div class="home-body">
+            <div class="cleanup">
+                <h1>Cleanup System</h1>
+                <form method="post" action="{% url 'cleanup_system' %}">
+                    {% csrf_token %}
+                    <button type="submit">Cleanup System</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
