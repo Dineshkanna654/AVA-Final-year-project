@@ -17,11 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from home.views import home
-from cleanup.views import cleanup_system 
+from cleanup.views import cleanup_system
+from form.views import submit_form
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home),
     path('cleanup/', cleanup_system, name='cleanup_system'),
+    path('form/',submit_form, name='submit_form',)
 
 ]

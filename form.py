@@ -52,9 +52,8 @@ def submit_form():
     t.sleep(0.5)
     pyg.hotkey('enter')
     t.sleep(5)
-    pyg.typewrite('dhanush')
+    pyg.typewrite('Sathiyam')
     t.sleep(2)
-    #send to first personhttps://docs.google.com/formshttps://docs.google.com/forms
 
 
     pyg.leftClick(192,196)

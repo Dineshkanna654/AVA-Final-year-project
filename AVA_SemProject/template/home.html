@@ -5,14 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="HomeStyle.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .navigation-bar {
+            display: flex;
+            background-color: black;
+            height: fit-content;
+            border-radius: 50p;
+        }
+
+        .logo {
+            display: flex;
+            height: 60px;
+        }
+
+        .pages {
+            width: 100vw;
+        }
+
+        .pages ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style-type: none;
+        }
+
+        li {
+            padding: 20px;
+            color: antiquewhite;
+            font-size: 20px;
+        }
+
+        .home-body {
+            background-image: url('C:\Users\PC\Desktop\Project\AVA_SemProject\template\ai.jpg');
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            color: chartreuse;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            gap: 20px;
+        }
+
+        .cleanup, .form{
+            height: 80px;
+            border: 10px solid black;
+            background-color: #ffffff;
+            opacity: 70%;
+        }
+
+    </style>
 </head>
 
 <body>
     <div class="main">
         <nav class="navigation-bar">
             <div class="logo">
-                <img src="https://cdn-icons-png.flaticon.com/128/9732/9732782.png" alt="">
+                <img src="https://cdn-icons-png.flaticon.com/128/9732/9732782.png" alt>
             </div>
             <div class="pages">
                 <ul>
@@ -30,6 +82,15 @@
                     <button type="submit">Cleanup System</button>
                 </form>
             </div>
+
+            <div class="form">
+                <h1>Create a Google form</h1>
+                <form method="post" action="{% url 'submit_form' %}">
+                    {% csrf_token %}
+                    <button type="submit">Create</button>
+                </form>
+            </div>
+
         </div>
     </div>
 </body>

@@ -1,10 +1,8 @@
 from django.shortcuts import render
-
-# Create your views here.
-from django.shortcuts import render
 from django.http import HttpResponse
 import pyautogui
 import time
+# Create your views here.
 
 def cleanup_system(request):
     try:
@@ -65,13 +63,9 @@ def cleanup_system(request):
         time.sleep(5)
         pyautogui.press('enter')
 
-        time.sleep(1)
+        time.sleep(2)
+        pyautogui.leftClick(709,740)
 
-        #shutdown
-        pyautogui.hotkey('win')
-        time.sleep(1)
-        pyautogui.leftClick(927, 672)
-        time.sleep(1)
 
         return HttpResponse("System cleanup completed successfully.")
     except Exception as e:
